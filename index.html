@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your day-to-day weight tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="wrapper">
+    <h1 class="main-heading">Your daily weight logger</h1>
+    <form class="weight-tracker-form" action="">
+      <fieldset>
+        <label class="weight-tracker-form__label" for="date">
+          Log the date:
+        </label>
+        <input
+          class="weight-tracker-form__input" 
+          type="date" 
+          name="date" 
+          id="dateInput"
+          value=""
+          required>        
+      </fieldset>
+      <fieldset class="weight-input-field">
+        <label class="weight-tracker-form__label" for="weight">
+          Log the weight:
+        </label>
+        <input 
+          class="weight-tracker-form__input"
+          type="number"
+          name="weight"
+          id="weightInput"
+          required>
+          <div class="form__input__number-validation">
+            <svg class="number-validation__warning-sign" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 286.054 286.054" style="enable-background:new 0 0 286.054 286.054;" xml:space="preserve">
+           <g>
+             <path style="fill:#e41a0a;" d="M143.027,0C64.04,0,0,64.04,0,143.027c0,78.996,64.04,143.027,143.027,143.027
+               c78.996,0,143.027-64.022,143.027-143.027C286.054,64.04,222.022,0,143.027,0z M143.027,259.236
+               c-64.183,0-116.209-52.026-116.209-116.209S78.844,26.818,143.027,26.818s116.209,52.026,116.209,116.209
+               S207.21,259.236,143.027,259.236z M143.036,62.726c-10.244,0-17.995,5.346-17.995,13.981v79.201c0,8.644,7.75,13.972,17.995,13.972
+               c9.994,0,17.995-5.551,17.995-13.972V76.707C161.03,68.277,153.03,62.726,143.036,62.726z M143.036,187.723
+               c-9.842,0-17.852,8.01-17.852,17.86c0,9.833,8.01,17.843,17.852,17.843s17.843-8.01,17.843-17.843
+               C160.878,195.732,152.878,187.723,143.036,187.723z"/>
+           </g>
+           </svg>
+                       
+            <span id="validationText"></span>
+          </div>
+      </fieldset>
+      <div class="form-buttons-container">
+        <a href="#" class="btn btn--main" id="weightLogger" onclick="return false">Log your weight</a>
+        <a href="#" class="btn btn--danger" id="clearEntriesButton" onclick="return false">Delete all entries</a>  
+      </div>
+    </form>
+
+    <div class="entries-container"></div>      
+  </main>
+  <script src="/scripts/weight-tracker-functions.js"></script>
+  <script src="/scripts/app.js"></script>
+
+</body>
+</html>
