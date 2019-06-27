@@ -51,3 +51,5 @@ weightLoggingButton.addEventListener('click', () => {
 clearEntriesButton.addEventListener('click', () => {
   deleteAllEntries();
 });
+
+// Messing with git flow
